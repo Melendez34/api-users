@@ -34,7 +34,7 @@ def get_user(id: int = Path(gt=0, le=200)) -> User | JSONResponse:
 
 @user_router.get('/users/', tags=['Users'])
 def get_user_by_username(username: Optional[str] = Query(min_length=4, max_length=25)):
-  """"GET user by username method"""
+  """GET user by username method"""
   db = Session()
   result_query = UserService(db).get_user_by_username(username)
   if not result_query:
