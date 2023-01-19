@@ -24,7 +24,7 @@ def get_users() -> List[User] | JSONResponse:
   return JSONResponse(status_code=status.HTTP_200_OK, content=jsonable_encoder(result))
 
 @user_router.get('/users/{id}', tags=['Users'], response_model=User)
-def get_user(id: int = Path(ge=1, le=200)) -> User | JSONResponse:
+def get_user(id: int = Path(gt=0, le=200)) -> User | JSONResponse:
   """GET user con path parameter"""
   db = Session()
   result_query = UserService(db).get_user(id)
