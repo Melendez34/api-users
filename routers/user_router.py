@@ -54,7 +54,7 @@ def get_user_by_username(username: Optional[str] = Query(min_length=4, max_lengt
     )
 
 
-@user_router.post("/users", tags=["Users"], status_code=201)
+@user_router.post("/users", tags=["Users"], status_code=status.HTTP_200_OK)
 def create_user(user: User) -> dict | JSONResponse:
     """POST create user method"""
     db = Session()

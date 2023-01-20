@@ -40,6 +40,6 @@ class UserService:
         return
 
     def delete_user(self, id: int):
-        user = self.db.query(UserTableModel).filter(UserTableModel.id == id).delete()
+        self.db.query(UserTableModel).filter(UserTableModel.id == id).delete()
         self.db.commit()
         return

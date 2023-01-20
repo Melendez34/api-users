@@ -12,3 +12,5 @@ class UserTableModel(Base):
     email = Column(String)
     password = Column(String)
     im = Column(String)
+    created_at = Column(Integer)
+    updated_at = Column(Integer)
