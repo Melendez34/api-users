@@ -16,8 +16,8 @@ app.include_router(login_router)
 
 Base.metadata.create_all(bind=engine)
 
-@app.get('/', tags=['Home'])
-def message():
-  """message method"""
-  return HTMLResponse('<h1>Hola Mundo!</h1>')
 
+@app.get("/", tags=["Home"])
+def message():
+    """message get method"""
+    return HTMLResponse("<h1>Hola Mundo!</h1>")
