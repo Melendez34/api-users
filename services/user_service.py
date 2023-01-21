@@ -1,5 +1,5 @@
 from models.user import UserTableModel
-from schemas.schema_user import User
+from schemas.user_schema import User
 
 
 class UserService:

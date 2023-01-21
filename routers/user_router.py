@@ -7,7 +7,7 @@ from fastapi.encoders import jsonable_encoder
 from middlewares.jwt_bearer import JWTBearer
 from config.database import Session
 from services.user_service import UserService
-from schemas.schema_user import User
+from schemas.user_schema import User
 
 user_router = APIRouter()
 
