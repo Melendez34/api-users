@@ -80,6 +80,7 @@ def update_user(id: int, user: User):
 
 @user_router.delete("/users/{id}", tags=["Users"])
 def delete_user(id: int):
+    """DELETE method user"""
     db = Session()
     result_query = UserService(db).get_user(id)
     if not result_query:

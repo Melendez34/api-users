@@ -13,7 +13,7 @@ class User(BaseModel):
     email: str = Field(max_length=30, min_length=10)
     password: str = Field(min_length=5, max_length=30)
     im: str = Field(str(uuid4()), max_length=36)
-    created_at: int = Field(int(time.time()), min_length=9)
+    created_at: int = Field(int(time.time()))
     updated_at: Optional[int] = None
 
     class Config:
